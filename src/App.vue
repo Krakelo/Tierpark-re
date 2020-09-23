@@ -1,19 +1,24 @@
 <template>
   <div id="app">
     <backimg />
-    <infobuttonY/>
+    <infobutton :x="x" :y="456" />
   </div>
 </template>
 
 <script>
 import backimg from '@/components/Image.vue'
-import Infobutton from "./components/InfoButton";
+import infobutton from '@/components/InfoButton.vue'
 
 export default {
   name: 'App',
   components: {
-    Infobutton,
-    backimg
+    backimg,
+    infobutton
+  },
+  data () {
+    return {
+      x: 123
+    }
   }
 }
 </script>
