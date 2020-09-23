@@ -1,4 +1,7 @@
 <template>
+  <button>
+    <img src="../assets/hintergrund/info.jpg"/>
+  </button>
 </template>
 
 <script>
@@ -7,6 +10,5 @@
     }
 </script>
 
-<style scoped>
-
+<style>
 </style>
