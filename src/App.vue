@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <backimg />
+
+    <infobuttonY/>
     <infobutton :x="x" :y="456" />
+
   </div>
 </template>
 
