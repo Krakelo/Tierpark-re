@@ -3,5 +3,8 @@
 </template>
 
 <style>
-
+  img {
+    position:sticky;
+    width: 100%
+  }
 </style>
