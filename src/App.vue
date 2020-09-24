@@ -12,6 +12,16 @@ export default {
   name: 'App',
   components: {
     backimg
+  },
+  data () {
+    return {
+      aylaAbfucken: false
+    }
+  },
+  created () {
+    setTimeout(() => {
+      this.aylaAbfucken = true
+    }, 5000)
   }
 }
 </script>

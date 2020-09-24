@@ -19,5 +19,27 @@
       "bsp1.jpg",
       "bsp2.jpg"
     ]
+  },
+  "3": {
+    "coordinates": {
+      "x": 44,
+      "y": 55 
+    },
+    "text": "blub",
+    "img": [
+      "bsp1.jpg",
+      "bsp2.jpg"
+    ]
+  },
+  "4": {
+    "coordinates": {
+      "x": 44,
+      "y": 55 
+    },
+    "text": "blub",
+    "img": [
+      "bsp1.jpg",
+      "bsp2.jpg"
+    ]
   }
 }

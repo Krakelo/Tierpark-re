@@ -3,8 +3,7 @@
     <b-button @click="click" :style="{left: x + 'vw', top: y + 'vw'}">
       <b-icon-info font-scale="1.4" />
     </b-button>
-    <contentvue v-if="clicked"/>
-
+    <contentvue v-if="clicked" />
   </div>
 </template>
 
