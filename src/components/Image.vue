@@ -2,7 +2,7 @@
   <img id="bckimg" src="@/assets/hintergrund/Hintergrund.png" />
 </template>
 
-<style>
+<style scoped>
   img {
     width: 100%;
     height: auto;

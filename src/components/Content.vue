@@ -1,59 +1,24 @@
 <template>
-<div>
-  <b-carousel class="overlay-content"
-    :style="{
-    left: 15+'%',
-     top: 15+'%',
-     right: 15+'%',
-     bottom: 15+'%'
-  }"
-    v-model="slide"
-    :interval="10000"
-    controls
-    indicators
-    background="#ababab"
-    img-width="1024"
-    img-height="480"
-    style="text-shadow: 1px 1px 2px #333;"
-    @sliding-start="onSlideStart"
-    @sliding-end="onSlideEnd"
-  >
-    <!-- Text slides with image -->
-    <b-carousel-slide
-      caption="First slide"
-      text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-      img-src="https://picsum.photos/1024/480/?image=52"
-    ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <template v-slot:img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
+  <div class="overlay-content" :style="{left: x + 'vw', top: y + 18 + 'vw'}">
+    <b-carousel
+      :interval="5000"
+      indicators
+      fade
+      background="#ababab"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
+    >
+      <template v-for="(b, idx) in button.content">
+        <b-carousel-slide
+          :key="idx"
+        >
+          <h1>{{ b.text }}</h1>
+          <img :src="require('@/assets/hintergrund/' + b.img)" style="width: auto;" />
+        </b-carousel-slide>
+      </template>
     </b-carousel>
-
-    <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p>
-
-</div>
+  </div>
 </template>
 
 <script>
@@ -72,14 +37,6 @@ export default {
       required: true
     }
   },
-  methods: {
-    onSlideStart (slide) {
-      this.sliding = true
-    },
-    onSlideEnd (slide) {
-      this.sliding = false
-    }
-  },
   computed: {
     x: function () {
       return this.button.coordinates.x || 0
@@ -94,13 +51,9 @@ export default {
 <style>
   .overlay-content {
     position: absolute;
-    z-index: 3;
-    margin: auto;
   }
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+
+  .carousel-inner {
+    overflow:visible;
   }
 </style>

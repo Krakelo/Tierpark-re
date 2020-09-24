@@ -4,9 +4,11 @@
       "x": 74.5,
       "y": 13.5 
     },
-    "text": "bla",
-    "img": [
-      "bsp1.jpg"
+    "content": [
+      {
+        "text": "bla",
+        "img": "bsp1.jpg"
+      }
     ]
   },
   "2": {
@@ -14,32 +16,63 @@
       "x": 44,
       "y": 55 
     },
-    "text": "blub",
-    "img": [
-      "bsp1.jpg",
-      "bsp2.jpg"
+    "content": [
+      {
+        "text": "bla",
+        "img": "bsp1.jpg"
+      },
+      {
+        "text": "bla",
+        "img": "bsp2.jpg"
+      }
     ]
   },
   "3": {
     "coordinates": {
       "x": 44,
-      "y": 55 
+      "y": 60 
     },
-    "text": "blub",
-    "img": [
-      "bsp1.jpg",
-      "bsp2.jpg"
+    "content": [
+      {
+        "text": "bla",
+        "img": "bsp1.jpg"
+      },
+      {
+        "text": "bla",
+        "img": "bsp2.jpg"
+      }
     ]
   },
   "4": {
     "coordinates": {
       "x": 44,
-      "y": 55 
+      "y": 80 
     },
-    "text": "blub",
-    "img": [
-      "bsp1.jpg",
-      "bsp2.jpg"
+    "content": [
+      {
+        "text": "bla",
+        "img": "bsp1.jpg"
+      },
+      {
+        "text": "bla",
+        "img": "bsp2.jpg"
+      }
+    ]
+  },
+  "5": {
+    "coordinates": {
+      "x": 44,
+      "y": 100
+    },
+    "content": [
+      {
+        "text": "bla",
+        "img": "bsp1.jpg"
+      },
+      {
+        "text": "bla",
+        "img": "bsp2.jpg"
+      }
     ]
   }
 }
