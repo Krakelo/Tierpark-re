@@ -62,8 +62,8 @@ export default {
     }
   },
   props: {
-    x: {
-      type: Number,
+    button: {
+      type: Object,
       required: true
     }
   },
@@ -73,6 +73,14 @@ export default {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    }
+  },
+  computed: {
+    x: function () {
+      return this.button.coordinates.x || 0
+    },
+    y: function () {
+      return this.button.coordinates.y || 0
     }
   }
 }
@@ -97,6 +105,10 @@ export default {
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
+    position: absolute;
+    width: 50%;
+    text-align: left;
+    margin-top: 40px;
   }
 
   .overlay a {

@@ -3,8 +3,7 @@
     <b-button @click="click" :style="{left: x + 'vw', top: y + 'vw'}">
       <b-icon-info font-scale="1.4" />
     </b-button>
-    <contentvue v-if="clicked" :x="x" :y="y" />
-
+    <contentvue v-if="clicked" :button="button" @removeoverlay="click" />
   </div>
 </template>
 
@@ -36,12 +35,6 @@ export default {
     },
     y: function () {
       return this.button.coordinates.y || 0
-    },
-    text: function () {
-      return this.button.text || ''
-    },
-    img: function () {
-      return this.object.img || []
     }
   }
 }
@@ -51,5 +44,9 @@ export default {
 button {
   position: absolute;
   z-index: 1;
+  border-radius: 10px;
+  border-color: #039be5;
+  background: lightgray;
+  opacity: 100%;
 }
 </style>
