@@ -1,7 +1,7 @@
 <template>
-<div class="overlay">
+<div>
   <b-carousel class="overlay-content"
-    id="carousel-1"
+    :style="{left: x / 2 + 'vw', top: y + 2 + 'vw'}"
     v-model="slide"
     :interval="10000"
     controls
@@ -87,49 +87,7 @@ export default {
 </script>
 
 <style>
-  .overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-  }
-
   .overlay-content {
-    position: fixed;
-    top: 25%;
-    width: 75%;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
     position: absolute;
-    width: 50%;
-    text-align: left;
-    margin-top: 40px;
-  }
-
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
   }
 </style>
