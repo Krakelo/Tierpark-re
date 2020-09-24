@@ -3,7 +3,7 @@
   <b-carousel class="overlay-content"
     id="carousel-1"
     v-model="slide"
-    :interval="4000"
+    :interval="10000"
     controls
     indicators
     background="#ababab"
@@ -93,9 +93,10 @@ export default {
   .overlay-content {
     position: relative;
     top: 25%;
-    width: 100%;
+    width: 75%;
     text-align: center;
-    margin-top: 30px;
+    margin: auto;
+    margin-bottom: 20px;
   }
 
   .overlay a {
@@ -109,13 +110,6 @@ export default {
 
   .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
-  }
-
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
   }
 
   @media screen and (max-height: 450px) {
