@@ -1,17 +1,15 @@
 <template>
   <div>
-    <b-button :class="{'clckbtn': clicked }" @click="click" :style="{left: x + 'vw', top: y + 'vw'}">
+    <b-button :class="{'clckbtn': clickedButton }" @click="clickButton" :style="{left: x + 'vw', top: y + 'vw'}">
       <b-icon-info font-scale="1.4" />
     </b-button>
-    <contentvue v-if="clicked" :button="button" @removeoverlay="click" />
+    <carousel v-if="clickedButton" :button="button" />
   </div>
 </template>
 
 <script>
-import contentvue from './Content'
 export default {
   name: 'infobutton',
-  components: { contentvue },
   props: {
     button: {
       type: Object,
@@ -20,12 +18,12 @@ export default {
   },
   data () {
     return {
-      clicked: false
+      clickedButton: false
     }
   },
   methods: {
-    click: function () {
-      this.clicked = !this.clicked
+    clickButton: function () {
+      this.clickedButton = !this.clickedButton
       if (this.clicked || !document.getElementById('bckimg').classList.contains('overlay')) {
         document.getElementById('bckimg').classList.add('overlay')
       } else if (document.getElementsByClassName('clckbtn').length === 1) {

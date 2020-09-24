@@ -1,7 +1,11 @@
 <template>
-  <div>
+  <div class="crsel" :style="{left: x + 'vw', top: y + 2 + 'vw'}">
     <h1>{{ a.text }}</h1>
-    <img class="crselimg" :src="require('@/assets/hintergrund/Vasilij.png' /*+ a.img */)" />
+    <img
+      :class="['crselimg', {'clckimg': clickedimg}]"
+      :src="require('@/assets/hintergrund/' + a.img)"
+      @click="clickImage"
+    />
 
     <!-- check if multiple items -->
     <template v-if="button.content.length > 1">
@@ -23,27 +27,33 @@ export default {
   },
   data () {
     return {
-      carouselIndex: 0
+      carouselIndex: 0,
+      x: 0,
+      y: 0,
+      clickedImage: false
     }
   },
   computed: {
     a: function () {
       return this.button.content[this.carouselIndex]
-    },
-    x: function () {
-      return this.button.coordinates.x || 0
-    },
-    y: function () {
-      return this.button.coordinates.y || 0
     }
   },
   methods: {
     nextElement: function () {
       this.carouselIndex = (this.carouselIndex + 1) % this.button.content.length
+      this.clickedImage = false
     },
     lastElement: function () {
       this.carouselIndex = (this.button.content.length - this.carouselIndex - 1) % this.button.content.length
+      this.clickedImage = false
+    },
+    clickImage: function () {
+      this.clickedImage = !this.clickedImage
     }
+  },
+  mounted () {
+    this.x = this.button.coordinates.x
+    this.y = this.button.coordinates.y
   }
 }
 </script>
@@ -51,26 +61,21 @@ export default {
 <style>
 .crsel {
   position: absolute;
+  margin: auto;
 }
 
-.crselimg {
-  transform: scale(0.1);
-  transition: all 10s ease-out;
+img.crselimg {
+  transition: all .3s ease-out;
   z-index: 2;
 }
 
-.crselimg:hover {
-  transform: scale(1.8);
+img.clckimg {
+  width: 70vw;
+  margin-left: 15vw;
   transition: all .3s ease-in;
-  text-align: center;
 }
-.last{
 
-  position: inherit;
-  bottom: auto;
-  z-index: 3;
-}
-.next{
+button.last, button.next {
   position: inherit;
   bottom: auto;
   z-index: 3;

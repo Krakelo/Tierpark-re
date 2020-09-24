@@ -1,5 +1,5 @@
 <template>
-  <img id="bckimg" src="@/assets/hintergrund/Hintergrund.png" />
+  <img id="bckimg" :src="require('@/assets/hintergrund/Hintergrund.png')" />
 </template>
 
 <style scoped>
