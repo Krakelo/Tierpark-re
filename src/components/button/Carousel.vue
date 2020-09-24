@@ -1,6 +1,8 @@
 <template>
   <div class="crsel" :style="{left: x + 'vw', top: y + 2 + 'vw'}">
-    <h1>{{ a.text }}</h1>
+    <center>
+      <h1>{{ a.text }}</h1>
+    </center>
     <img
       :class="['crselimg', {'clckimg': clickedImage}]"
       :src="require('@/assets/hintergrund/' + a.img)"
@@ -54,6 +56,11 @@ export default {
   mounted () {
     this.x = this.button.coordinates.x
     this.y = this.button.coordinates.y
+  },
+  watch: {
+    clickedImage: function (newValue, oldValue) {
+      this.x = newValue ? 0 : this.button.coordinates.x
+    }
   }
 }
 </script>
@@ -65,13 +72,14 @@ export default {
 }
 
 img.crselimg {
-  transition: all .3s ease-out;
+  width: 20vw;
+  transition: all .3s;
   z-index: 2;
 }
 
 img.clckimg {
-  width: 70vw;
-  margin-left: 15vw;
+  width: 60vw;
+  margin-left: 20vw;
   transition: all .3s ease-in;
 }
 last, next {
