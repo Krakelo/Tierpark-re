@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-button :class="{'clckbtn': clickedButton }" @click="clickButton" :style="{left: x + 'vw', top: y + 'vw'}">
+    <b-button :class="{'clckbtn': clickedButton }" @click="clickButton" :style="{left: x + 'vw', top: y + 'vw', opacity: visibility + '%' }">
       <b-icon-info font-scale="1.4" />
     </b-button>
     <carousel v-if="clickedButton" :button="button" />
@@ -42,6 +42,9 @@ export default {
     },
     y: function () {
       return this.button.coordinates.y || 0
+    },
+    visibility: function () {
+      return this.button.visibility
     }
   }
 }

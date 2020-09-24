@@ -2,19 +2,20 @@
   "1": {
     "coordinates": {
       "x": 73.5,
-      "y": 13.5 
+      "y": 13.5
     },
     "content": [
       {
         "text": "Ich bin dumm",
         "img": "bsp1.jpg"
       }
-    ]
+    ],
+    "visibility": 100
   },
   "2": {
     "coordinates": {
       "x": 52,
-      "y": 55 
+      "y": 55
     },
     "content": [
       {
@@ -25,7 +26,8 @@
         "text": "bla",
         "img": "bsp2.jpg"
       }
-    ]
+    ],
+    "visibility": 100
   },
   "3": {
     "coordinates": {
@@ -41,7 +43,8 @@
         "text": "War ein Witz :)",
         "img": "bsp2.jpg"
       }
-    ]
+    ],
+    "visibility": 100
   },
   "4": {
     "coordinates": {
@@ -57,7 +60,8 @@
         "text": "bla",
         "img": "bsp2.jpg"
       }
-    ]
+    ],
+    "visibility": 100
   },
   "5": {
     "coordinates": {
@@ -73,6 +77,7 @@
         "text": "bla",
         "img": "bsp2.jpg"
       }
-    ]
+    ],
+    "visibility": 100
   }
 }
