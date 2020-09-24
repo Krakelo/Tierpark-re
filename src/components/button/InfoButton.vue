@@ -24,9 +24,10 @@ export default {
   methods: {
     clickButton: function () {
       this.clickedButton = !this.clickedButton
-      if (this.clicked || !document.getElementById('bckimg').classList.contains('overlay')) {
+      console.log(this.clickedButton || !document.getElementById('bckimg').classList.contains('overlay'))
+      if (this.clickedButton || !document.getElementById('bckimg').classList.contains('overlay')) {
         document.getElementById('bckimg').classList.add('overlay')
-      } else if (document.getElementsByClassName('clckbtn').length === 1) {
+      } else if (document.getElementsByClassName('clckbtn').length === 0) {
         document.getElementById('bckimg').classList.remove('overlay')
       }
     }
@@ -49,6 +50,5 @@ button {
   border-radius: 10px;
   border-color: #039be5;
   background: lightgray;
-  opacity: 100%;
 }
 </style>

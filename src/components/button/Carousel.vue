@@ -2,7 +2,7 @@
   <div class="crsel" :style="{left: x + 'vw', top: y + 2 + 'vw'}">
     <h1>{{ a.text }}</h1>
     <img
-      :class="['crselimg', {'clckimg': clickedimg}]"
+      :class="['crselimg', {'clckimg': clickedImage}]"
       :src="require('@/assets/hintergrund/' + a.img)"
       @click="clickImage"
     />
