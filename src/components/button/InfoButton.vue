@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-button @click="click" :style="{left: x + 'vw', top: y + 'vw'}">
+    <b-button :class="{'clckbtn': clicked }" @click="click" :style="{left: x + 'vw', top: y + 'vw'}">
       <b-icon-info font-scale="1.4" />
     </b-button>
     <contentvue v-if="clicked" :button="button" @removeoverlay="click" />
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import contentvue from '../Content'
+import contentvue from './Content'
 export default {
   name: 'infobutton',
   components: { contentvue },
@@ -26,9 +26,9 @@ export default {
   methods: {
     click: function () {
       this.clicked = !this.clicked
-      if (!document.getElementById('bckimg').classList.contains('overlay')) {
+      if (this.clicked || !document.getElementById('bckimg').classList.contains('overlay')) {
         document.getElementById('bckimg').classList.add('overlay')
-      } else {
+      } else if (document.getElementsByClassName('clckbtn').length === 1) {
         document.getElementById('bckimg').classList.remove('overlay')
       }
     }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ a.text }}</h1>
-    <img class="crselimg" :src="require('@/assets/hintergrund/' + a.img)" />
+    <img class="crselimg" :src="require('@/assets/hintergrund/Vasilij.png' /*+ a.img */)" />
 
     <!-- check if multiple items -->
     <template v-if="button.content.length > 1">
@@ -54,12 +54,13 @@ export default {
 }
 
 .crselimg {
-  transition: all 1s;
+  transform: scale(0.1);
+  transition: all 10s ease-out;
 }
 
 .crselimg:hover {
   transform: scale(1.8);
-  transition: all 1s;
+  transition: all .3s ease-in;
   text-align: center;
 }
 </style>

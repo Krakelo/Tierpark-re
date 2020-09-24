@@ -6,13 +6,13 @@
   img {
     width: 100%;
     height: auto;
-
+    transition: all .5s;
   }
 
   img.overlay {
     filter: brightness(50%) blur(5px);
     opacity: 90%;
-    transition: all 1s;
+    transition: all .5s;
   }
 
 </style>
