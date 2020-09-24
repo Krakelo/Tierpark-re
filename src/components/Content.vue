@@ -1,35 +1,16 @@
 <template>
-  <div class="overlay-content" :style="{left: x + 'vw', top: y + 18 + 'vw'}">
-    <b-carousel
-      :interval="5000"
-      indicators
-      fade
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
-    >
-      <template v-for="(b, idx) in button.content">
-        <b-carousel-slide
-          :key="idx"
-        >
-          <h1>{{ b.text }}</h1>
-          <img :src="require('@/assets/hintergrund/' + b.img)" style="width: auto;" />
-        </b-carousel-slide>
-      </template>
-    </b-carousel>
+  <div class="overlay-content" :style="{left: x + 'vw', top: y + 4 + 'vw'}">
+    <carousel :button="button" />
   </div>
 </template>
 
 <script>
+import carousel from './Carousel'
 
 export default {
   name: 'ContentVue',
-  data () {
-    return {
-      slide: 0,
-      sliding: null
-    }
+  components: {
+    carousel
   },
   props: {
     button: {
@@ -49,11 +30,7 @@ export default {
 </script>
 
 <style>
-  .overlay-content {
-    position: absolute;
-  }
-
-  .carousel-inner {
-    overflow:visible;
-  }
+.overlay-content {
+  position: absolute;
+}
 </style>
