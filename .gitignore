@@ -4,6 +4,7 @@ node_modules
 /.firebase
 *.pdf
 *.svg
+.firebaserc
 
 .firebaserc
 firebase.json
