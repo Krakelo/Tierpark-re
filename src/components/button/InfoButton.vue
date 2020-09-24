@@ -10,22 +10,28 @@
 export default {
   name: 'infobutton',
   props: {
-    id: {
-      type: String,
-      required: false
-    },
-    x: {
-      type: Number,
-      required: true
-    },
-    y: {
-      type: Number,
+    button: {
+      type: Object,
       required: true
     }
   },
   methods: {
     click: function () {
       alert('hi')
+    }
+  },
+  computed: {
+    x: function () {
+      return this.button.coordinates.x || 0
+    },
+    y: function () {
+      return this.button.coordinates.y || 0
+    },
+    text: function () {
+      return this.button.text || ''
+    },
+    img: function () {
+      return this.object.img || []
     }
   }
 }

@@ -1,16 +1,16 @@
 <template>
   <div>
     <infobutton
-      v-for="(c, idx) in coordinates"
+      v-for="(c, idx) in buttons"
       :key="idx"
-      :x="c.x"
-      :y="c.y"
+      :button="c"
     />
   </div>
 </template>
 
 <script>
 import infobutton from './InfoButton'
+import buttons from '@/assets/json/buttons.json'
 
 export default {
   name: 'btnhandler',
@@ -19,11 +19,7 @@ export default {
   },
   data () {
     return {
-      coordinates: [
-        { x: 74.5, y: 13.5 },
-        { x: 44, y: 55 },
-        { x: 543, y: 456 }
-      ]
+      buttons
     }
   }
 }
