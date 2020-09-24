@@ -1,7 +1,12 @@
 <template>
 <div>
   <b-carousel class="overlay-content"
-    :style="{left: x / 2 + 'vw', top: y + 2 + 'vw'}"
+    :style="{
+    left: 15+'%',
+     top: 15+'%',
+     right: 15+'%',
+     bottom: 15+'%'
+  }"
     v-model="slide"
     :interval="10000"
     controls
@@ -89,5 +94,13 @@ export default {
 <style>
   .overlay-content {
     position: absolute;
+    z-index: 3;
+    margin: auto;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
   }
 </style>
