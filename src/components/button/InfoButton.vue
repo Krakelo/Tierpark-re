@@ -50,6 +50,6 @@ export default {
 <style>
 button {
   position: absolute;
-  z-index: 9000;
+  z-index: 1;
 }
 </style>
