@@ -1,7 +1,7 @@
 <template>
-  <b-button class="overlay" @click="$emit('removeoverlay')">
-    <b-carousel class="overlay-content"
-      id="carousel-1"
+  <div @click="$emit('removeoverlay')">
+    <b-carousel
+      class="content"
       :style="{left: (x / 2) + 'vw', top: y + 'vw'}"
       v-model="slide"
       :interval="4000"
@@ -48,7 +48,7 @@
       Sliding: {{ sliding }}
     </p>
 
-  </b-button>
+  </div>
 </template>
 
 <script>
@@ -87,50 +87,7 @@ export default {
 </script>
 
 <style>
-  .overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-  }
-
-  .overlay-content {
-    position: absolute;
-    width: 50%;
-    text-align: left;
-    margin-top: 40px;
-  }
-
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
+.content {
+  position: absolute;
+}
 </style>

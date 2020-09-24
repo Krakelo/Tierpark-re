@@ -26,7 +26,11 @@ export default {
   methods: {
     click: function () {
       this.clicked = !this.clicked
-      console.log(this.clicked)
+      if (!document.getElementById('bckimg').classList.contains('overlay')) {
+        document.getElementById('bckimg').classList.add('overlay')
+      } else {
+        document.getElementById('bckimg').classList.remove('overlay')
+      }
     }
   },
   computed: {
