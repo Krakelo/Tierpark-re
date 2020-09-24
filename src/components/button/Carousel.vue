@@ -5,8 +5,8 @@
 
     <!-- check if multiple items -->
     <template v-if="button.content.length > 1">
-      <b-button @click="lastElement"><b-icon-arrow-left-circle /></b-button>
-      <b-button @click="nextElement"><b-icon-arrow-right-circle /></b-button>
+      <b-button class="last" @click="lastElement"><b-icon-arrow-left-circle /></b-button>
+      <b-button class="next" @click="nextElement"><b-icon-arrow-right-circle /></b-button>
     </template>
 
   </div>
@@ -56,11 +56,23 @@ export default {
 .crselimg {
   transform: scale(0.1);
   transition: all 10s ease-out;
+  z-index: 2;
 }
 
 .crselimg:hover {
   transform: scale(1.8);
   transition: all .3s ease-in;
   text-align: center;
+}
+.last{
+
+  position: inherit;
+  bottom: auto;
+  z-index: 3;
+}
+.next{
+  position: inherit;
+  bottom: auto;
+  z-index: 3;
 }
 </style>
