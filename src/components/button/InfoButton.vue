@@ -26,7 +26,11 @@ export default {
   methods: {
     click: function () {
       this.clicked = !this.clicked
-      console.log(this.clicked)
+      if (!document.getElementById('bckimg').classList.contains('overlay')) {
+        document.getElementById('bckimg').classList.add('overlay')
+      } else {
+        document.getElementById('bckimg').classList.remove('overlay')
+      }
     }
   },
   computed: {
@@ -43,7 +47,7 @@ export default {
 <style>
 button {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   border-radius: 10px;
   border-color: #039be5;
   background: lightgray;
