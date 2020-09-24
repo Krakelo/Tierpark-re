@@ -1,4 +1,9 @@
 <template>
+  <!-- top: 50+'%',
+    bottom: 15+'%',
+    left: 15+'%',
+    right: 15+'%'
+  -->
   <div class="overlay-content" :style="{left: x + 'vw', top: y + 4 + 'vw'}">
     <carousel :button="button" />
   </div>
@@ -32,5 +37,6 @@ export default {
 <style>
 .overlay-content {
   position: absolute;
+  margin: auto;
 }
 </style>
