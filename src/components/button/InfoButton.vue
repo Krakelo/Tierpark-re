@@ -24,12 +24,16 @@ export default {
   methods: {
     clickButton: function () {
       this.clickedButton = !this.clickedButton
-      console.log(this.clickedButton || !document.getElementById('bckimg').classList.contains('overlay'))
       if (this.clickedButton || !document.getElementById('bckimg').classList.contains('overlay')) {
         document.getElementById('bckimg').classList.add('overlay')
-      } else if (document.getElementsByClassName('clckbtn').length === 0) {
-        document.getElementById('bckimg').classList.remove('overlay')
       }
+
+      /* waiting for tags to update their classes */
+      setTimeout(() => {
+        if (document.getElementsByClassName('clckbtn').length === 0) {
+          document.getElementById('bckimg').classList.remove('overlay')
+        }
+      }, 100)
     }
   },
   computed: {
