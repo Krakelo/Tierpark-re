@@ -1,5 +1,10 @@
 <template>
-  <div class="overlay-content" :style="{left: x + 'vw', top: y + 18 + 'vw'}">
+  <div class="overlay-content" :style="{
+    top: 50+'%',
+    bottom: 15+'%',
+    left: 15+'%',
+    right: 15+'%',
+    }">
     <b-carousel
       :interval="5000"
       indicators
@@ -51,6 +56,8 @@ export default {
 <style>
   .overlay-content {
     position: absolute;
+    margin: auto;
+
   }
 
   .carousel-inner {
