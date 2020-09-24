@@ -43,11 +43,9 @@ export default {
   methods: {
     nextElement: function () {
       this.carouselIndex = (this.carouselIndex + 1) % this.button.content.length
-      this.clickedImage = false
     },
     lastElement: function () {
       this.carouselIndex = (this.button.content.length - this.carouselIndex - 1) % this.button.content.length
-      this.clickedImage = false
     },
     clickImage: function () {
       this.clickedImage = !this.clickedImage
@@ -82,9 +80,13 @@ img.clckimg {
   margin-left: 20vw;
   transition: all .3s ease-in;
 }
-last, next {
+button.last, button.next {
   position: inherit;
   bottom: auto;
   z-index: 3;
+}
+
+button.next {
+  margin-top: 45px;
 }
 </style>
