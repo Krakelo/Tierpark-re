@@ -74,8 +74,7 @@ img.clckimg {
   margin-left: 15vw;
   transition: all .3s ease-in;
 }
-
-button.last, button.next {
+last, next {
   position: inherit;
   bottom: auto;
   z-index: 3;

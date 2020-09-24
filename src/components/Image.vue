@@ -11,7 +11,6 @@
 
   img.overlay {
     filter: brightness(50%) blur(5px);
-    opacity: 90%;
     transition: all .5s;
   }
 

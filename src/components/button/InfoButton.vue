@@ -49,6 +49,5 @@ button {
   border-radius: 10px;
   border-color: #039be5;
   background: lightgray;
-  opacity: 100%;
 }
 </style>
