@@ -79,5 +79,20 @@
       }
     ],
     "visibility": 100
+  },
+  "6": {
+    "coordinates": {
+      "x": 76,
+      "y": 189
+    },
+    "content": [
+      {
+        "text": "WIR LIEBEN SIE! LIEBEN SIE UNS ZURÜCK!",
+        "img": "JoVa.jpeg"
+      }
+    ],
+    "id": "vajo",
+    "visibility": 2,
+    "fullscreen": true
   }
 }

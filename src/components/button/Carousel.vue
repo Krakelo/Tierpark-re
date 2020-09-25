@@ -1,5 +1,5 @@
 <template>
-  <div class="crsel" :style="{left: x + 'vw', top: y + 2 + 'vw'}">
+  <div :id="button.id" class="crsel" :style="{left: x + 'vw', top: y + 2 + 'vw'}">
     <center>
       <h1>{{ a.text }}</h1>
     </center>
@@ -88,5 +88,10 @@ button.last, button.next {
 
 button.next {
   margin-top: 45px;
+}
+
+#vajo {
+  transform: scale(10);
+  transition: all 30s;
 }
 </style>

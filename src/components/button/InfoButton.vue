@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-button :class="{'clckbtn': clickedButton }" @click="clickButton" :style="{left: x + 'vw', top: y + 'vw', opacity: visibility + '%' }">
+    <b-button :id="'btn' + button.id" :class="{'clckbtn': clickedButton }" @click="clickButton" :style="{left: x + 'vw', top: y + 'vw', opacity: visibility + '%' }">
       <b-icon-info font-scale="1.4" />
     </b-button>
     <carousel v-if="clickedButton" :button="button" />
@@ -34,6 +34,23 @@ export default {
           document.getElementById('bckimg').classList.remove('overlay')
         }
       }, 100)
+
+      if (typeof this.button.fullscreen !== 'undefined' && this.button.fullscreen === true) {
+        const element = document.getElementById('vajo')
+        this.enterFullscreen(element)
+        document.getElementById('btnvajo').remove()
+      }
+    },
+    enterFullscreen: function (element) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen()
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen()
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen()
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen()
+      }
     }
   },
   computed: {
