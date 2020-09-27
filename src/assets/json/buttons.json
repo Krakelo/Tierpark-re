@@ -6,8 +6,12 @@
     },
     "content": [
       {
-        "text": "Ich bin dumm",
-        "img": "bsp1.jpg"
+        "text": "",
+        "img": "1_HausNr1.png"
+      },
+      {
+        "text": "",
+        "img": "2_HausNr1.png"
       }
     ],
     "visibility": 100
@@ -19,12 +23,36 @@
     },
     "content": [
       {
-        "text": "bla",
-        "img": "bsp1.jpg"
+        "text": "",
+        "img": "1_Rezeptbox.jpg"
       },
       {
-        "text": "bla",
-        "img": "bsp2.jpg"
+        "text": "",
+        "img": "2_Rezeptbox.jpg"
+      },
+      {
+        "text": "",
+        "img": "3_Rezeptbox.jpg"
+      },
+      {
+        "text": "",
+        "img": "4_Rezeptbox.jpg"
+      },
+      {
+        "text": "",
+        "img": "5_Rezeptbox.jpg"
+      },
+      {
+        "text": "",
+        "img": "6_Rezeptbox.jpg"
+      },
+      {
+        "text": "",
+        "img": "7_Rezeptbox.jpg"
+      },
+      {
+        "text": "",
+        "img": "8_Rezeptbox.png"
       }
     ],
     "visibility": 100
@@ -36,12 +64,32 @@
     },
     "content": [
       {
-        "text": "Ayla ist doof und ihr Projekt",
-        "img": "bsp1.jpg"
+        "text": "",
+        "img": "1_ZH.png"
       },
       {
-        "text": "War ein Witz :)",
-        "img": "bsp2.jpg"
+      "text": "",
+      "img": "2_ZH.jpg"
+      },
+      {
+        "text": "",
+        "img": "3_ZH.jpg"
+      },
+      {
+        "text": "",
+        "img": "4_ZH.png"
+      },
+      {
+        "text": "",
+        "img": "5_ZH.jpg"
+      },
+      {
+        "text": "",
+        "img": "6_ZH_K.mp4"
+      },
+      {
+        "text": "",
+        "img": "7_ZH.png"
       }
     ],
     "visibility": 100
@@ -53,12 +101,36 @@
     },
     "content": [
       {
-        "text": "bla",
-        "img": "bsp1.jpg"
+        "text": "",
+        "img": "1_Stehpult.jpg"
       },
       {
-        "text": "bla",
-        "img": "bsp2.jpg"
+        "text": "",
+      "img": "2_Stehpult.png"
+      },
+      {
+        "text": "",
+        "img": "3_Stehpult.jpg"
+      },
+      {
+        "text": "",
+        "img": "4_Stehpult.png"
+      },
+      {
+        "text": "",
+        "img": "5_Stehpult.png"
+      },
+      {
+        "text": "",
+        "img": "6_Stehpult.jpg"
+      },
+      {
+        "text": "",
+        "img": "7_Stehpult.jpg"
+      },
+      {
+        "text": "",
+        "img": "8_Stehpult.png"
       }
     ],
     "visibility": 100
@@ -70,12 +142,12 @@
     },
     "content": [
       {
-        "text": "bla",
-        "img": "bsp1.jpg"
+        "text": "",
+        "img": "1_Spielplatz.jpg"
       },
       {
-        "text": "bla",
-        "img": "bsp2.jpg"
+        "text": "",
+        "img": "2_Spielplatz.png"
       }
     ],
     "visibility": 100

@@ -71,14 +71,14 @@ export default {
 
 img.crselimg {
   width: 20vw;
-  transition: all .3s;
+  transition: all .2s;
   z-index: 2;
 }
 
 img.clckimg {
   width: 60vw;
   margin-left: 20vw;
-  transition: all .3s ease-in;
+  transition: all .2s ease-in;
 }
 button.last, button.next {
   position: inherit;

@@ -6,7 +6,7 @@
   img {
     width: 100%;
     height: auto;
-    transition: all .5s;
+    transition: all .2s;
   }
 
   img.overlay {
