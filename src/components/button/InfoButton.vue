@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- id is only used to do stupid stuff -->
     <b-button :id="'btn' + button.id" :class="{'clckbtn': clickedButton }" @click="clickButton" :style="{left: x + 'vw', top: y + 'vw', opacity: visibility + '%' }">
       <b-icon-info font-scale="1.4" />
     </b-button>
@@ -35,6 +36,8 @@ export default {
         }
       }, 100)
 
+
+      /* doing stupid stuff down here lol */
       if (typeof this.button.fullscreen !== 'undefined' && this.button.fullscreen === true) {
         const element = document.getElementById('vajo')
         this.enterFullscreen(element)
@@ -42,6 +45,7 @@ export default {
       }
     },
     enterFullscreen: function (element) {
+      /* only needed for stupid stuff */
       if (element.requestFullscreen) {
         element.requestFullscreen()
       } else if (element.mozRequestFullScreen) {
